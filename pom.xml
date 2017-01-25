@@ -7,7 +7,7 @@
   <packaging>sonar-plugin</packaging>
   <version>0.1-SNAPSHOT</version>
 
-  <name>IK Custom Report Plugin</name>
+  <name>IK Custom Report</name>
   <description>Fetches failures count from custom report file</description>
 
   <properties>

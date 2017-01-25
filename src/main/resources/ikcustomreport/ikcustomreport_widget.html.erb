@@ -2,7 +2,7 @@
 
   <div class="widget-measure-container">
     <div class="widget-measure widget-measure-main">
-      <span class="widget-label nowrap">Connect API versioning test</span>
+      <span class="widget-label nowrap"><%= Property.value('sonar.ikcustomreport.widget_title', @project.id) -%></span>
       <% 
         measure = measure('ik_custom_report_failures_count')
         if measure && measure.value == 0

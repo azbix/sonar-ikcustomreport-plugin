@@ -10,6 +10,7 @@ import org.sonar.api.resources.Qualifiers;
 
 public class IKCustomReportPluginProperties {
 
+  public static final String IK_CUSTOM_WIDGET_TITLE = "sonar.ikcustomreport.widget_title";
   public static final String IK_CUSTOM_REPORT_FILENAME = "sonar.ikcustomreport.filename";
   public static final String IK_CUSTOM_REPORT_PATTERN = "sonar.ikcustomreport.pattern";
 
@@ -20,6 +21,12 @@ public class IKCustomReportPluginProperties {
   public static List<PropertyDefinition> definitions() {
     int i = 0;
     return asList(
+      PropertyDefinition.builder(IK_CUSTOM_WIDGET_TITLE)
+        .name("Widget title")
+        .description("Caption of widget title")
+        .onlyOnQualifiers(Qualifiers.PROJECT)
+        .index(++i)
+        .build(),
       PropertyDefinition.builder(IK_CUSTOM_REPORT_FILENAME)
         .name("Report file")
         .description("Name of report file")
